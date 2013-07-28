@@ -224,6 +224,7 @@
     <Content Include="Views\SpellingTest\SelectAction.cshtml" />
     <Content Include="Views\SpellingTest\SelectTest.cshtml" />
     <Content Include="Views\SpellingTest\GiveTest.cshtml" />
+    <Content Include="Views\SpellingTest\TestComplete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

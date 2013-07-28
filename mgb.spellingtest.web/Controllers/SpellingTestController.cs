@@ -20,13 +20,13 @@ namespace SpellingTest.Controllers
             return View();
         }
 
-        [HttpPost]
+        //[HttpPost]
         public ActionResult SelectAction()
         {
             return View();
         }
 
-        [HttpPost]
+        //[HttpPost]
         public ActionResult ActionRouting(string Options)
         {
             switch (Options)
@@ -47,28 +47,44 @@ namespace SpellingTest.Controllers
         }
 
 
-        [HttpPost]
-        public ActionResult GetTestData(string TestId)
+        //[HttpPost]
+        public ActionResult GetTestData( /*string TestId*/ )
         {
             // Get test data for the given TestId
 
             // Begin the test
-            return RedirectToAction("Test");
+            return RedirectToAction("GiveTest");
         }
 
 
-        [HttpPost]
-        public ActionResult GiveTest(/*receives an object with test data in it */)
+        //[HttpPost]
+        public ActionResult GiveTest( /*receives an object with test data in it */ )
         {
             // check to see if all questions in the test data object have been answered.
             // If all answered, redirect
             //else, return the view, passing in the object again
 
+            var testFinished = false;
+
+            if (!testFinished)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("TestComplete");
+            }
+        }
+
+
+       // [HttpPost]
+        public ActionResult TestComplete()
+        {
             return View();
         }
-               
+
         
-        [HttpPost]
+       // [HttpPost]
         public ActionResult Speak(string textToSpeak)
         {
 
@@ -84,7 +100,7 @@ namespace SpellingTest.Controllers
             t.Start();
             t.Join();
 
-            return RedirectToAction("Test");
+            return RedirectToAction("GiveTest");
         }
     }
 }

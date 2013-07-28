@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "TestComplete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TestComplete</h2>
+@using (Html.BeginForm("SelectAction", "SpellingTest", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{    
+    <input type ="submit" name ="submit" value ="Finish" />
+}

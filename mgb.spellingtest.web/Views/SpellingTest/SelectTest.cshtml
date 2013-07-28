@@ -4,7 +4,7 @@
 }
 
 <h2>Select a test to take</h2>
-@using (Html.BeginForm("Test", "SpellingTest", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("GetTestData", "SpellingTest", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {    
     <input type ="submit" name ="submit" value ="Submit" />
 }
