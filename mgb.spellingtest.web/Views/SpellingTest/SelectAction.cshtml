@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Select Action";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Student Options</h2>
+
+@using (Html.BeginForm("ActionRouting", "SpellingTest", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.RadioButton("Options", 1, true) @:New Test
+    <br />
+    @Html.RadioButton("Options", 2, false) @:Retake old test   
+    <br />
+    @Html.RadioButton("Options", 3, false) @:Review words missed on old test       
+    <br />
+    <input type ="submit" name ="submit" value ="Submit" />
+}

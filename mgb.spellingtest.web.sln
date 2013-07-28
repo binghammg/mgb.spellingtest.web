@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mgb.spellingtest.web", "mgb.spellingtest.web\mgb.spellingtest.web.csproj", "{C79EF730-9581-470F-B762-50E346905E6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mgb.spellingtest.web.Tests", "mgb.spellingtest.web.Tests\mgb.spellingtest.web.Tests.csproj", "{F75ED87E-06EE-487E-8A81-3652FC91AC5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C79EF730-9581-470F-B762-50E346905E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C79EF730-9581-470F-B762-50E346905E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C79EF730-9581-470F-B762-50E346905E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C79EF730-9581-470F-B762-50E346905E6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F75ED87E-06EE-487E-8A81-3652FC91AC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F75ED87E-06EE-487E-8A81-3652FC91AC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F75ED87E-06EE-487E-8A81-3652FC91AC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F75ED87E-06EE-487E-8A81-3652FC91AC5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

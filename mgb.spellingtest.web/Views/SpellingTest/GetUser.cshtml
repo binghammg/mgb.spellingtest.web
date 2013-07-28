@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Log In";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                Please enter your user name.
+            </p>
+        </div>
+    </section>
+}
+
+@section Scripts
+{
+    <script type="text/javascript">
+        function validatePage()
+        {            
+            if (document.login.UserName.value == "")
+            {
+                alert("Please enter your user name.");
+                document.login.UserName.focus();
+                return false;
+            }
+        }
+
+        function init()
+        {
+            document.login.UserName.focus();
+        }
+
+        window.onload = init;
+    </script>
+
+}
+
+@using (Html.BeginForm("SelectAction", "SpellingTest", FormMethod.Post, new { name= "login", id="login", enctype = "multipart/form-data", onsubmit = "return validatePage();"}))
+{
+    <table>
+        <tr>
+            <td>User Name:</td>
+            <td><input type ="text" id="UserName" name ="UserName" title="Please enter your user name"/></td>
+            <td><input type="button" name="UserLookup" value="Lookup" /></td>
+        </tr>
+        <tr>
+            <td><input type ="submit" name ="submit" value ="Log In" /></td>
+        </tr>
+    </table>    
+}
