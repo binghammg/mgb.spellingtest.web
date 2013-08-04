@@ -1,10 +1,25 @@
-﻿@{
+﻿@using mgb.spellingtest.web.SpellingTestReference;
+@model List<Test>
+
+@{
     ViewBag.Title = "SelectTest";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Select a test to take</h2>
 @using (Html.BeginForm("GetTestData", "SpellingTest", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{    
+{
+    <table>    
+
+        @foreach (Test singleTest in @Model)
+        {               
+            <tr>
+                <td>@singleTest.Name</td>
+                <td>@singleTest.Description</td>
+            </tr>
+        }
+
+    </table>
+    
     <input type ="submit" name ="submit" value ="Submit" />
 }

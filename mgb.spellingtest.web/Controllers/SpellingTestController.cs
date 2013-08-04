@@ -6,11 +6,14 @@ using System.Web.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Speech.Synthesis;
+using mgb.spellingtest.web.SpellingTestReference;
+
 
 namespace SpellingTest.Controllers
 {
     public class SpellingTestController : Controller
     {
+                
 
         public ActionResult GetUser()
         {
@@ -34,9 +37,11 @@ namespace SpellingTest.Controllers
                 case "1":
 
                     // Get test list
+                    SpellingTestServiceClient client = new SpellingTestServiceClient();
+                    List<Test> testList = client.GetTestList("whatever").ToList();
 
                     // Display test list
-                    return View("SelectTest");
+                    return View("SelectTest", testList);
                 case "2":
                     return View("RetakeOldTest");
                 case "3":
