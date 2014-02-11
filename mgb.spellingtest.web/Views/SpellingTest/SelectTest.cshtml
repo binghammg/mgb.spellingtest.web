@@ -14,8 +14,8 @@
         @foreach (Test singleTest in @Model)
         {               
             <tr>
-                <td>@singleTest.Name</td>
-                <td>@singleTest.Description</td>
+                <td>@Html.ActionLink(@singleTest.Name,"GetTestData","SpellingTest")</td>
+                <td>@Html.ActionLink(@singleTest.Description,"GetTestData","SpellingTest")</td>
             </tr>
         }
 
